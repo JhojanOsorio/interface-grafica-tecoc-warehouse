@@ -5,6 +5,7 @@
     padding: 0;
 }
 
+
 body {
     font-family: 'Rubik', sans-serif;
 }
@@ -16,14 +17,26 @@ $gray: #c4ccde;
     display: flex;
 }
 .navbar{
-    background-color: $ligth;
+    color: white;
+    background-color: #34495E;
     padding: 1rem 2rem;
     border-bottom: 1px solid $gray;
 }
 
+.imagen{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
 .sidebar{
-    width: 14rem;
-    height: calc(100vh - 52px);
+    background-color: #3498DB;
+    width: 16rem;
+    height: calc(130vh - 52px);
     border-right: 1px solid $gray;
     ul{
         list-style: none;
@@ -32,6 +45,9 @@ $gray: #c4ccde;
             margin-bottom: 1rem;
          a{
              text-decoration: none;
+             &.active{
+                 background-color: #2980B9;
+             }
          }
         }
     }
