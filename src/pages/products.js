@@ -3,18 +3,12 @@ import TableProduct from "../components/TableProduct"
 
 const Products = () => {
     return(
-        <div className="container">
-            <div className="row">
-            <div className="col">
+        <div className="container">         
                 <br/>
                 <Menu/>
                 <br/>
                 <TableProduct/>
-            </div>
         </div>
-        </div>
-        
-    
     )
 }
 export default Products

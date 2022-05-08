@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom"
 import Admin from'../assets/img/Admin.jpeg'
 
+//import * as FaIcons from 'react-icons/fa'
 import * as FaIcons from 'react-icons/fa'
 
 const Sidebar = () => {
