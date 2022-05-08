@@ -24,7 +24,7 @@ const Sidebar = () => {
                     <NavLink to="/clients" exact className="text-white rounded py-2 w-100 d-inline-block px-3" activeClassName="active"><FaIcons.FaUserCircle className="me-2"></FaIcons.FaUserCircle>Clientes</NavLink>            
            </li>
            <li>
-                    <NavLink to="/responsible" exact className="text-white rounded py-2 w-100 d-inline-block px-3" activeClassName="active"><FaIcons.FaUserAlt className="me-2"></FaIcons.FaUserAlt>Responsable</NavLink>          
+                    <NavLink to="/responsible" exact className="text-white rounded py-2 w-120 d-inline-block px-3" activeClassName="active"><FaIcons.FaUserAlt className="me-7"></FaIcons.FaUserAlt>Responsable</NavLink>          
            </li>
            <li>      
                     <NavLink to="/users" exact className="text-white rounded py-2 w-100 d-inline-block px-3" activeClassName="active"><FaIcons.FaUsers className="me-2"></FaIcons.FaUsers>Usuarios</NavLink>      

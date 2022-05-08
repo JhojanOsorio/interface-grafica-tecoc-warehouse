@@ -17,6 +17,7 @@ $gray: #c4ccde;
     display: flex;
 }
 .navbar{
+    display:block;
     color: white;
     background-color: #34495E;
     padding: 1rem 2rem;
@@ -30,13 +31,23 @@ $gray: #c4ccde;
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+
+.thead-dark{
+    background-color: #2C3E50;
+    color: white;
+}
+
+.btn-success{
+    background-color: #2ECC71;
 
 }
 
 .sidebar{
     background-color: #3498DB;
-    width: 16rem;
-    height: calc(130vh - 52px);
+    width: 18rem;
+    height: calc(140vh - 52px);
     border-right: 1px solid $gray;
     ul{
         list-style: none;
