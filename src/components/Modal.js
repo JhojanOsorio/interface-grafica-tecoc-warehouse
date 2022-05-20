@@ -18,14 +18,14 @@ function ModalCreateProduct({setShow, show}) {
 
         <Modal.Body>
           <form>
-            <div class="container">
-              <div class="row row-cols-2">
-                <div class="col  ">
-                  <div class="form-group  fw-bolder mt-4">
+            <div className="container">
+              <div className="row row-cols-2">
+                <div className="col  ">
+                  <div className="form-group  fw-bolder mt-4">
                     <label for="formGroupExampleInput ">Código</label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="formGroupExampleInput"
                       placeholder=""
                     ></input>
@@ -34,34 +34,34 @@ function ModalCreateProduct({setShow, show}) {
                     <label for="formGroupExampleInput2 ">Nombre</label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="formGroupExampleInput2"
                       placeholder=""
                     ></input>
                   </div>
-                  <div class="form-group fw-bolder">
+                  <div className="form-group fw-bolder">
                     <label for="formGroupExampleInput2  ">Descripción</label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="formGroupExampleInput2"
                       placeholder=""
                     ></input>
                   </div>
-                  <div class="form-group fw-bolder">
+                  <div className="form-group fw-bolder">
                     <label for="formGroupExampleInput2">Serial</label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="formGroupExampleInput2"
                       placeholder=""
                     ></input>
                   </div>
-                  <div class="form-group fw-bolder">
+                  <div className="form-group fw-bolder">
                     <label for="formGroupExampleInput2">Departamento</label>
 
                     <select
-                      class="form-select"
+                      className="form-select"
                       aria-label="Default select example"
                     >
                       <option selected>Selecciona el departamento</option>
@@ -70,11 +70,11 @@ function ModalCreateProduct({setShow, show}) {
                       <option value="3">Three</option>
                     </select>
                   </div>
-                  <div class="form-group fw-bolder">
+                  <div className="form-group fw-bolder">
                     <label for="formGroupExampleInput2">Municipio</label>
 
                     <select
-                      class="form-select"
+                      className="form-select"
                       aria-label="Default select example"
                     >
                       <option selected>Selecciona el municipio</option>
@@ -83,97 +83,96 @@ function ModalCreateProduct({setShow, show}) {
                       <option value="3">Three</option>
                     </select>
                   </div>
-                  <div class="form-group fw-bolder">
+                  <div className="form-group fw-bolder">
                     <label for="formGroupExampleInput2">Tipo</label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="formGroupExampleInput2"
                       placeholder=""
                     ></input>
                   </div>
-                  <div class="form-group fw-bolder">
+                  <div className="form-group fw-bolder">
                     <label for="formGroupExampleInput2">Modelo</label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="formGroupExampleInput2"
                       placeholder=""
                     ></input>
                   </div>
                 </div>
-                <div class="col">
+                <div className="col">
                   <div class="form-group fw-bolder mt-4">
                     <label for="formGroupExampleInput">Responsable</label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="formGroupExampleInput"
                       placeholder=""
                     ></input>
                   </div>
-                  <div class="form-group fw-bolder">
+                  <div className="form-group fw-bolder">
                     <label for="formGroupExampleInput2">Lugar</label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="formGroupExampleInput2"
                       placeholder=""
                     ></input>
                   </div>
-                  <div class="form-group fw-bolder">
+                  <div className="form-group fw-bolder">
                     <label for="formGroupExampleInput2">Condición</label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="formGroupExampleInput2"
                       placeholder=""
                     ></input>
                   </div>
-                  <div class="form-group fw-bolder">
+                  <div className="form-group fw-bolder">
                     <label for="formGroupExampleInput2">Cantidad</label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="formGroupExampleInput2"
                       placeholder=""
                     ></input>
                   </div>
-                  <div class="form-group fw-bolder">
+                  <div className="form-group fw-bolder">
                     <label for="formGroupExampleInput2">Valor</label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="formGroupExampleInput2"
                       placeholder=""
                     ></input>
                   </div>
-                  <div class="form-group fw-bolder">
+                  <div className="form-group fw-bolder">
                     <label for="formGroupExampleInput2">Observaciones</label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="formGroupExampleInput2"
                       placeholder=""
                     ></input>
                   </div>
-                  <div class="form-group fw-bolder">
+                  <div className="form-group fw-bolder">
                     <label for="formGroupExampleInput2">Último pedido</label>
                     <input
                       type="date"
-                      class="form-control"
+                      className="form-control"
                       id="formGroupExampleInput2"
                       placeholder=""
                     ></input>
                   </div>
 
-                  <div class="form-group fw-bolder">
+                  <div className="form-group fw-bolder">
                     <label for="formGroupExampleInput2">Foto</label>
                     <input
                       type="file"
-                      class="custom-file-input"
                       id="customFile  "
-                      className="btn btn-primary"
+                      className="btn btn-primary custom-file-input"
                     ></input>
                   </div>
                 </div>

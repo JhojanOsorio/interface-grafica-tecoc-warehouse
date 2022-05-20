@@ -6,7 +6,7 @@ const Navbar = () => {
 
     <h7>Productos</h7>
     <button>
-    <img src={imgEncendido} class="img-fluid" ></img>
+    <img src={imgEncendido} className="img-fluid" ></img>
     </button>
 </div>
     )
