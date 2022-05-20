@@ -12,7 +12,7 @@ function TableProduct() {
         }
 
         GetAllProducts();
-    })
+    }, [])
   return (
     <div className='row'>
         <div className='col'>
