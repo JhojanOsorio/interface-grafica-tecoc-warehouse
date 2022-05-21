@@ -1,13 +1,9 @@
 const Navbar = () => {
-    return (
-    
+  return (
     <div className="navbar">
+      <h6>Productos</h6>
+    </div>
+  );
+};
 
-    <h7>Productos</h7>
-
-</div>
-    )
-}
-
-export default Navbar
-
+export default Navbar;
