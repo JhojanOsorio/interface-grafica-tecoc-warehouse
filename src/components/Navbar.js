@@ -1,3 +1,4 @@
+import imgEncendido from'../assets/img/imgEncendido.jpeg'
 const Navbar = () => {
   return (
     <div className="navbar">
@@ -6,4 +7,9 @@ const Navbar = () => {
   );
 };
 
+
+
 export default Navbar;
+  
+
+

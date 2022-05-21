@@ -12,11 +12,11 @@ function TableProduct() {
         }
 
         GetAllProducts();
-    })
+    }, [])
   return (
     <div className='row'>
         <div className='col'>
-            <table className="table table-xl-responsive">
+            <table className="table table-responsive">
                 <thead className="thead-dark">
                     <tr>
                    
