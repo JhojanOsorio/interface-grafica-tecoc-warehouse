@@ -1,8 +1,8 @@
 import imgEncendido from'../assets/img/imgEncendido.jpeg'
-const Navbar = () => {
+const Navbar = (props) => {
   return (
     <div className="navbar">
-      <h6>Productos</h6>
+      <h6>{props.screen}</h6>
     </div>
   );
 };

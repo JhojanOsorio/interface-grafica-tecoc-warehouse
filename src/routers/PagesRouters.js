@@ -13,11 +13,11 @@ function PagesRouters() {
     <div className="flex">
       <Sidebar />
       <div className="content w-100">
-        <Navbar />
+        <Navbar screen="ALMACÉN TECOC" />
         <Routes>
           <Route path="clients" element={<Clients />}></Route>
           <Route path="users" element={<Users></Users>}></Route>
-          <Route path="product" element={<Products></Products>}></Route>
+          <Route path="products" element={<Products></Products>}></Route>
           <Route
             path="responsible"
             element={<Responsible></Responsible>}

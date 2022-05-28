@@ -1,7 +1,12 @@
+import TableProduct01 from "../components/TableProduct"
+
 const Clients = () => {
     return(
 
-        <p>Clientes</p>
+        <div>
+
+        </div>
+
     )
 }
 export default Clients

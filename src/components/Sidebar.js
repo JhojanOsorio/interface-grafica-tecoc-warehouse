@@ -18,7 +18,7 @@ const Sidebar = () => {
               to="/products"
               className="text-white rounded py-2 w-100 d-inline-block px-3"
             >
-              <FaIcons.FaProductHunt className="me-2"></FaIcons.FaProductHunt>{" "}
+              <FaIcons.FaBox className="me-2"></FaIcons.FaBox>{" "}
               Productos{" "}
             </NavLink>
           </li>
@@ -27,7 +27,7 @@ const Sidebar = () => {
               to="/clients"
               className="text-white rounded py-2 w-100 d-inline-block px-3"
             >
-              <FaIcons.FaProductHunt className="me-2"></FaIcons.FaProductHunt>
+              <FaIcons.FaUsers className="me-2"></FaIcons.FaUsers>
               Clientes
             </NavLink>
           </li>
@@ -36,7 +36,7 @@ const Sidebar = () => {
               to="/responsible"
               className="text-white rounded py-2 w-100 d-inline-block px-3"
             >
-              <FaIcons.FaProductHunt className="me-2"></FaIcons.FaProductHunt>
+              <FaIcons.FaUser className="me-2"></FaIcons.FaUser>
               Responsable
             </NavLink>
           </li>
@@ -45,7 +45,7 @@ const Sidebar = () => {
               to="/users"
               className="text-white rounded py-2 w-100 d-inline-block px-3"
             >
-              <FaIcons.FaProductHunt className="me-2"></FaIcons.FaProductHunt>
+              <FaIcons.FaUser className="me-2"></FaIcons.FaUser>
               Usuarios
             </NavLink>
           </li>

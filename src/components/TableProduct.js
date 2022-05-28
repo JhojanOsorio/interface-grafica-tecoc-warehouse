@@ -1,7 +1,12 @@
+import React from 'react'
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
+import DataTable, {createTheme} from 'react-data-table-component';
+import * as FaIcons from "react-icons/fa";
+import Menu from './Menu'
 
-function TableProduct() {
+
+function TableProduct01() {
     const [ListProduct, setListProduct] = useState([]);
     useEffect(()=>{
         const GetAllProducts = async () =>{
@@ -13,62 +18,116 @@ function TableProduct() {
 
         GetAllProducts();
     }, [])
+
+    const colums = [
+        {
+            name : '',
+            selector: row => <a className='btn btn-primary'><FaIcons.FaEdit/></a>
+             
+        },
+        {
+            name : '',
+            selector: row => <a className='btn btn-danger'><FaIcons.FaTrash/></a> 
+        },
+        {
+            name : 'Código',
+            selector: row => row.code
+        },
+        {
+            name : 'Nombre Producto',
+            selector: row => row.nameProduct
+        },
+        {
+            name : 'Descripción',
+            selector: row => row.description
+        },
+        {
+            name : 'Serial',
+            selector: row => row.serial
+        },
+        {
+            name : 'Departamento',
+            selector: row => row.departament
+        },
+        {
+            name : 'Municipio',
+            selector: row => row.municipality
+        },
+        {
+            name : 'Tipo',
+            selector: row => row.typeProduct
+        },
+        {
+            name : 'Modelo',
+            selector: row => row.model
+        },
+        {
+            name : 'Responsable',
+            selector: row => row.responsible
+        },
+        {
+            name : 'Lugar',
+            selector: row => row.place
+        },
+        {
+            name : 'Condición',
+            selector: row => row.condition
+        },
+        {
+            name : 'Cantidad',
+            selector: row => row.amount
+        },
+        {
+            name : 'Valor',
+            selector: row => '$' + row.totalValue
+        },
+        {
+            name : 'Observaciones',
+            selector: row => row.observations
+        },
+        {
+            name : 'último Pedido',
+            selector: row => row.lastOrder
+        },
+
+    ]
+
+    const paginationOptions = {
+        rowsPerPageText: 'Filas por Página',
+        rangeSeparatorText: 'de',
+        selectAllRowsItem: true,
+        selectAllRowsItemText: 'Todos'
+    }
+
+
+
+
+      
+      
   return (
-    <div className='row'>
-        <div className='col'>
-            <table className="table table-responsive">
-                <thead className="thead-dark">
-                    <tr>
-                   
-                            <th>Código</th>
-                            <th>Nombre</th>
-                            <th>Descripción</th>
-                            <th>Serial</th>
-                            <th>Departamento</th>
-                            <th>Municipio</th>
-                            <th>Tipo</th>
-                            <th>Modelo</th>
-                            <th>Responsable</th>
-                            <th>Lugar</th>
-                            <th>Condición</th>
-                            <th>Cantidad</th>
-                            <th>Valor</th>
-                            <th>Obserbaciones</th>
-                            <th>Útimo Pedido</th>
-                            <th></th>
-                            <th></th>
-                        </tr>
-                </thead>
-                <tbody>
-                    {
-                        ListProduct.map((item,i)=>(
-                            <tr>
-                    
-                                <th>{item.code}</th>                               
-                                <td>{item.nameProduct}</td>
-                                <td>{item.description}</td>
-                                <td>{item.serial}</td>
-                                <td>{item.departament}</td>
-                                <td>{item.municipality}</td>
-                                <td>{item.typeProduct}</td>
-                                <td>{item.model}</td>
-                                <td>{item.responsible}</td>
-                                <td>{item.place}</td>
-                                <td>{item.condition}</td>
-                                <td>{item.amount}</td>
-                                <td>${item.totalValue}</td>
-                                <td>{item.observations}</td>
-                                <td>{item.lastOrder}</td>
-                                <td><a className='btn btn-success'>Editar</a></td>
-                                <td><a className='btn btn-danger'>Editar</a></td>
-                            </tr>
-                        ))
-                    }
-                </tbody>
-            </table>
+    <div>
+        <br/>
+        <div className='row'>
+            <div className='col'>
+                <div class="card">   
+                    <div className="card-header">
+                        <h3>Lista de Productos <FaIcons.FaBox/></h3> 
+                    </div>
+                    <div className="card-body"> 
+                        <Menu/>
+                        <DataTable className='table table-responsive'
+                        columns={colums}
+                        data={ListProduct}
+                        pagination 
+                        paginationComponentOptions={paginationOptions}   
+                        /> 
+                    </div>
+                </div>        
+            </div>
         </div>
     </div>
+
   )
 }
 
-export default TableProduct
+export default TableProduct01

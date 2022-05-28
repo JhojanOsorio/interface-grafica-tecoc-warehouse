@@ -3,11 +3,8 @@ import TableProduct from "../components/TableProduct"
 
 const Products = () => {
     return(
-        <div className="container">         
-                <br/>
-                <Menu/>
-                <br/>
-                <TableProduct/>
+        <div className="container">
+            <TableProduct/>
         </div>
     )
 }
