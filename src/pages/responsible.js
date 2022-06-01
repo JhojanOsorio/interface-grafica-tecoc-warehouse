@@ -1,7 +1,11 @@
+import TableResponsable from "../components/TableResponsable"
+
 const Responsible = () => {
     return(
 
-        <p>Responsables</p>
+        <div className="container2">
+            <TableResponsable/>
+        </div>
     )
 }
 export default Responsible

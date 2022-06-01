@@ -1,10 +1,11 @@
+import TableClient from "../components/TableClient"
 import TableProduct01 from "../components/TableProduct"
 
 const Clients = () => {
     return(
 
-        <div>
-
+        <div className="container2">
+            <TableClient/>
         </div>
 
     )

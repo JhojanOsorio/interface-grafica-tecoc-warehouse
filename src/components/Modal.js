@@ -1,44 +1,48 @@
 import React, { useState } from "react";
-import Button from 'react-bootstrap/Button'
+import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import axios from 'axios';
+import axios from "axios";
 
-function ModalCreateProduct({setShow, show}) {
+function ModalCreateProduct({ setShow, show }) {
+
+
+
+
+  
   const handleClose = () => setShow(false);
-  const[managerSelected, setManagerSelected] = useState({
-    "name": "",
-    "description": "",
-    "serial": "",
-    "idType": 1,
-    "idDepartament": "",
-    "idMunicipality": "",
-    "place": "",
-    "lastOrder": "",
-    "condition": "",
-    "amount": "",
-    "totalValue": "",
-    "model": "",
-    "observations": "",
-    "idResponsable": 1,
-    "idPlace": 2
+  const [managerSelected, setManagerSelected] = useState({
+    name: "",
+    description: "",
+    serial: "",
+    idType: 1,
+    idDepartament: "",
+    idMunicipality: "",
+    place: "",
+    lastOrder: "",
+    condition: "",
+    amount: "",
+    totalValue: "",
+    model: "",
+    observations: "",
+    idResponsable: 1,
+    idPlace: 2,
   });
 
-  const InsertProducts = async () =>{
-    
+  const InsertProducts = async () => {
     const url = "https://localhost:44378/api/products";
     const result = await axios.post(url, managerSelected);
-    
-    console.log(result.data);
-}
 
-  const handleChange=e=>{
-    const{name, value} = e.target;
+    console.log(result.data);
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
     setManagerSelected({
       ...managerSelected,
-      [name]: value
+      [name]: value,
     });
     console.log(managerSelected);
-  }
+  };
 
   return (
     <div>
@@ -72,7 +76,7 @@ function ModalCreateProduct({setShow, show}) {
                       type="text"
                       className="form-control"
                       onChange={handleChange}
-                      name = "name"
+                      name="name"
                       id="formGroupExampleInput2"
                       placeholder=""
                     ></input>
@@ -82,7 +86,7 @@ function ModalCreateProduct({setShow, show}) {
                     <input
                       type="text"
                       className="form-control"
-                      name = "description"
+                      name="description"
                       onChange={handleChange}
                       id="formGroupExampleInput2"
                       placeholder=""
@@ -93,7 +97,7 @@ function ModalCreateProduct({setShow, show}) {
                     <input
                       type="text"
                       className="form-control"
-                      name = "serial"
+                      name="serial"
                       id="formGroupExampleInput2"
                       onChange={handleChange}
                       placeholder=""
@@ -104,7 +108,7 @@ function ModalCreateProduct({setShow, show}) {
 
                     <select
                       className="form-select"
-                      name = "idDepartament"
+                      name="idDepartament"
                       onChange={handleChange}
                       aria-label="Default select example"
                     >
@@ -119,7 +123,7 @@ function ModalCreateProduct({setShow, show}) {
 
                     <select
                       className="form-select"
-                      name = "idMunicipality"
+                      name="idMunicipality"
                       onChange={handleChange}
                       aria-label="Default select example"
                     >
@@ -133,7 +137,7 @@ function ModalCreateProduct({setShow, show}) {
                     <label for="formGroupExampleInput2">Modelo</label>
                     <input
                       type="text"
-                      name = "model"
+                      name="model"
                       onChange={handleChange}
                       className="form-control"
                       id="formGroupExampleInput2"
@@ -166,7 +170,7 @@ function ModalCreateProduct({setShow, show}) {
                     <label for="formGroupExampleInput2">Condición</label>
                     <input
                       type="text"
-                      name = "condition"
+                      name="condition"
                       onChange={handleChange}
                       className="form-control"
                       id="formGroupExampleInput2"
@@ -189,7 +193,7 @@ function ModalCreateProduct({setShow, show}) {
                     <input
                       type="text"
                       className="form-control"
-                      name = "totalValue"
+                      name="totalValue"
                       onChange={handleChange}
                       id="formGroupExampleInput2"
                       placeholder=""
@@ -200,7 +204,7 @@ function ModalCreateProduct({setShow, show}) {
                     <input
                       type="text"
                       className="form-control"
-                      name = "observations"
+                      name="observations"
                       onChange={handleChange}
                       id="formGroupExampleInput2"
                       placeholder=""
@@ -240,7 +244,12 @@ function ModalCreateProduct({setShow, show}) {
           >
             Cancelar
           </Button>
-          <Button id="guardar" variant="primary" onClick={()=>InsertProducts()} className=" fw-bolder">
+          <Button
+            id="guardar"
+            variant="primary"
+            onClick={() => InsertProducts()}
+            className=" fw-bolder"
+          >
             Guardar
           </Button>
         </Modal.Footer>
