@@ -1,8 +1,8 @@
-
+import React, {useState} from "react";
 import Button from 'react-bootstrap/Button';
 import * as FaIcons from "react-icons/fa";
-import React, {useState} from "react";
 import Modal from "react-bootstrap/Modal";
+
 
 
 
@@ -33,7 +33,7 @@ function Example() {
           keyboard={false}
         ><div classname='TitleModalR'> 
             <Modal.Header closeButton>
-        <Modal.Title>Igresa un nuevo responsable</Modal.Title>
+        <Modal.Title>Igresa un nuevo Responsable</Modal.Title>
       </Modal.Header>
 
       </div>

@@ -1,9 +1,11 @@
-import MenuUser from '../components/MenuUser'
+import TableUser from '../components/TableUser'
 
 const Users = () => {
     return(
 
-        <MenuUser/>
+        <div className="container2">
+            <TableUser/>
+        </div>
     )
 }
 export default Users

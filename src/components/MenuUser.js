@@ -6,7 +6,7 @@ import Modal from "react-bootstrap/Modal";
 
 
 
-function Example() {
+function MenuUser() {
     const [show, setShow] = useState(false);
     
     const handleClose = () => setShow(false);
@@ -33,7 +33,7 @@ function Example() {
           keyboard={false}
         ><div classname='TitleModalR'> 
             <Modal.Header closeButton>
-        <Modal.Title>Igresa un nuevo cliente</Modal.Title>
+        <Modal.Title>Igresa un nuevo Usuario</Modal.Title>
       </Modal.Header>
 
       </div>
@@ -43,7 +43,7 @@ function Example() {
             <form>
             
                   <div className="form-group  fw-bolder mt-4">
-                    <label for="formGroupExampleInput ">Nombre</label>
+                    <label for="formGroupExampleInput ">Usuario</label>
                     <input
                       type="text"
                       className="form-control"
@@ -52,7 +52,7 @@ function Example() {
                     ></input>
                   </div>
                   <div class="form-group fw-bolder">
-                    <label for="formGroupExampleInput2 ">Apellido</label>
+                    <label for="formGroupExampleInput2 ">Contraseña</label>
                     <input
                       type="text"
                       className="form-control"
@@ -62,28 +62,7 @@ function Example() {
                       placeholder=""
                     ></input>
                   </div>
-                  <div className="form-group fw-bolder">
-                    <label for="formGroupExampleInput2  ">Cargo</label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      name="description"
-         
-                      id="formGroupExampleInput2"
-                      placeholder=""
-                    ></input>
-                  </div>
-                  <div className="form-group fw-bolder">
-                    <label for="formGroupExampleInput2">Identificación</label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      name="serial"
-                      id="formGroupExampleInput2"
-                  
-                      placeholder=""
-                    ></input>
-                  </div>
+                 
                   
                   
           </form>
@@ -103,4 +82,4 @@ function Example() {
     );
   }
     
-  export default Example;
+  export default MenuUser;

@@ -3,10 +3,10 @@ import axios from 'axios';
 import { useEffect, useState } from 'react'
 import DataTable, {createTheme} from 'react-data-table-component';
 import * as FaIcons from "react-icons/fa";
-import MenuResponsable from './MenuResponsable'
+import MenuUser from './MenuUser'
 
 
-function TableResponsable() {
+function TableUser() {
     const [ListResponsable, setListResponsable] = useState([]);
     useEffect(()=>{
         const GetAllProducts = async () =>{
@@ -30,21 +30,14 @@ function TableResponsable() {
             selector: row => <a className='btn btn-danger'><FaIcons.FaTrash/></a> 
         },
         {
-            name : 'Nombre',
+            name : 'Usuario',
             selector: row => row.name
         },
         {
-            name : 'Apellido',
+            name : 'Contraseña',
             selector: row => row.lastname
         },
-        {
-            name : 'Posición',
-            selector: row => row.position
-        },
-        {
-            name : 'Identificación',
-            selector: row => row.identificationCard
-        },
+        
     ]
 
     const paginationOptions = {
@@ -62,10 +55,10 @@ function TableResponsable() {
             <div className='col'>
                 <div class="card">   
                     <div className="card-header">
-                        <h3>Lista de Responsables<FaIcons.FaBox/></h3> 
+                        <h3>Lista de Usuarios<FaIcons.FaBox/></h3> 
                     </div>
                     <div className="card-body"> 
-                        <MenuResponsable/>
+                        <MenuUser/>
                         <DataTable className='table table-responsive'
                         columns={colums}
                         data={ListResponsable}
@@ -80,4 +73,4 @@ function TableResponsable() {
   )
 }
 
-export default TableResponsable
+export default TableUser

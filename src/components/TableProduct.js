@@ -3,7 +3,8 @@ import axios from 'axios';
 import { useEffect, useState } from 'react'
 import DataTable, {createTheme} from 'react-data-table-component';
 import * as FaIcons from "react-icons/fa";
-import Menu from './Menu'
+import MenuProduct from './MenuProduct'
+
 
 
 function TableProduct01() {
@@ -114,7 +115,7 @@ function TableProduct01() {
                         <h3>Lista de Productos <FaIcons.FaBox/></h3> 
                     </div>
                     <div className="card-body"> 
-                        <Menu/>
+                        <MenuProduct/>
                         <DataTable className='table table-responsive'
                         columns={colums}
                         data={ListProduct}
