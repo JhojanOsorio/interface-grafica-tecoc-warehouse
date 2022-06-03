@@ -1,4 +1,4 @@
-import Menu from "../components/Menu"
+
 import TableProduct from "../components/TableProduct"
 
 const Products = () => {

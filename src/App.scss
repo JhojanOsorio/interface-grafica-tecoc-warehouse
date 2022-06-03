@@ -108,12 +108,34 @@ $gray: #c4ccde;
     text-align: center;
 }
 
-.BodyModalR{
+
+
+ .TitleModalEdit {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color: #3498DB;
+    border-color: #000102;
+    width: 150%;
+    text-align: center;
+}
+
+.ModalHeaderDelete{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color:white;
+    border-color: #000102;
     width: 100%;
+    text-align: center;
+    
+    
+}
 
-    }
-
- .FooterModalR{
-     width:100%;
- }
-
+.ModalFooterDelete{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color: #bde0f7;
+    border-color: #000102;
+    width: 100%;
+    text-align: center;
+}
+.ModalTitleDelete
+{
+    background-color:white;
+}

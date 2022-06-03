@@ -6,9 +6,22 @@ import Modal from 'react-bootstrap/Modal';
   
 function Example() {
   const [show, setShow] = useState(false);
-  
+  const [gestorSeleccionado, setGestorSeleccionado] = useState({
+    name: '',
+    description: '',
+    serial: '',
+    idType: '',
+    idDepartament: 1,
+    idMunicipality: 1,
+    place: ''
+
+  })
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const handleChange=e=>{
+
+  }
   
   return (
     <>

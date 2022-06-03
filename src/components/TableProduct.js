@@ -4,10 +4,20 @@ import { useEffect, useState } from 'react'
 import DataTable, {createTheme} from 'react-data-table-component';
 import * as FaIcons from "react-icons/fa";
 import MenuProduct from './MenuProduct'
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+  
 
 
 
 function TableProduct01() {
+    const [show, setShow] = useState(false);
+
+  const [showD, setShowD] = useState(false);
+  const handleCloseD = () => setShowD(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+  const handleShowD = () => setShowD(true);
     const [ListProduct, setListProduct] = useState([]);
     useEffect(()=>{
         const GetAllProducts = async () =>{
@@ -23,12 +33,12 @@ function TableProduct01() {
     const colums = [
         {
             name : '',
-            selector: row => <a className='btn btn-primary'><FaIcons.FaEdit/></a>
+            selector: row => <a onClick={handleShow}     className='btn btn-primary'><FaIcons.FaEdit/></a>
              
         },
         {
             name : '',
-            selector: row => <a className='btn btn-danger'><FaIcons.FaTrash/></a> 
+            selector: row => <a  onClick={handleShowD}  className='btn btn-danger'><FaIcons.FaTrash/></a>
         },
         {
             name : 'Código',
@@ -100,12 +110,12 @@ function TableProduct01() {
         selectAllRowsItemText: 'Todos'
     }
 
-
-
-
       
       
   return (
+
+
+    
     <div>
         <br/>
         <div className='row'>
@@ -126,6 +136,257 @@ function TableProduct01() {
                 </div>        
             </div>
         </div>
+
+
+
+        {/* Modal para Insertar */}
+
+        <Modal className='ModalEdit'
+        show={show}
+        onHide={handleClose}
+        backdrop="static"
+        keyboard={false}
+      ><div className='TitleModalEdit'>
+           <Modal.Header   closeButton>
+          <Modal.Title >Editar producto</Modal.Title>
+          </Modal.Header>
+     </div>
+        
+        <Modal.Body className='ModalBodyEdit'>
+        <form>
+            <div className="container">
+              <div className="row row-cols-2">
+                <div className="col  ">
+                  <div className="form-group  fw-bolder mt-4">
+                    <label for="formGroupExampleInput ">Código</label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      id="formGroupExampleInput"
+                      placeholder=""
+                    ></input>
+                  </div>
+                  <div class="form-group fw-bolder">
+                    <label for="formGroupExampleInput2 ">Nombre</label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      name="name"
+                      id="formGroupExampleInput2"
+                      placeholder=""
+                    ></input>
+                  </div>
+                  <div className="form-group fw-bolder">
+                    <label for="formGroupExampleInput2  ">Descripción</label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      name="description"
+                      
+                      id="formGroupExampleInput2"
+                      placeholder=""
+                    ></input>
+                  </div>
+                  <div className="form-group fw-bolder">
+                    <label for="formGroupExampleInput2">Serial</label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      name="serial"
+                      id="formGroupExampleInput2"
+                     
+                      placeholder=""
+                    ></input>
+                  </div>
+                  <div className="form-group fw-bolder">
+                    <label for="formGroupExampleInput2">Departamento</label>
+
+                    <select
+                      className="form-select"
+                      name="idDepartament"
+                      
+                      aria-label="Default select example"
+                    >
+                      <option selected>Selecciona el departamento</option>
+                      <option value="1">Antioquia</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                  <div className="form-group fw-bolder">
+                    <label for="formGroupExampleInput2">Municipio</label>
+
+                    <select
+                      className="form-select"
+                      name="idMunicipality"
+                      
+                      aria-label="Default select example"
+                    >
+                      <option selected>Selecciona el municipio</option>
+                      <option value="1">SantaFe</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                  <div className="form-group fw-bolder">
+                    <label for="formGroupExampleInput2">Modelo</label>
+                    <input
+                      type="text"
+                      name="model"
+                      
+                      className="form-control"
+                      id="formGroupExampleInput2"
+                      placeholder=""
+                    ></input>
+                  </div>
+                </div>
+                <div className="col">
+                  <div class="form-group fw-bolder mt-4">
+                    <label for="formGroupExampleInput">Responsable</label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      id="formGroupExampleInput"
+                      placeholder=""
+                    ></input>
+                  </div>
+                  <div className="form-group fw-bolder">
+                    <label for="formGroupExampleInput2">Lugar</label>
+                    <input
+                      type="text"
+                      name="place"
+                     
+                      className="form-control"
+                      id="formGroupExampleInput2"
+                      placeholder=""
+                    ></input>
+                  </div>
+                  <div className="form-group fw-bolder">
+                    <label for="formGroupExampleInput2">Condición</label>
+                    <input
+                      type="text"
+                      name="condition"
+                      
+                      className="form-control"
+                      id="formGroupExampleInput2"
+                      placeholder=""
+                    ></input>
+                  </div>
+                  <div className="form-group fw-bolder">
+                    <label for="formGroupExampleInput2">Cantidad</label>
+                    <input
+                      type="text"
+                      name="amount"
+                     
+                      className="form-control"
+                      id="formGroupExampleInput2"
+                      placeholder=""
+                    ></input>
+                  </div>
+                  <div className="form-group fw-bolder">
+                    <label for="formGroupExampleInput2">Valor</label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      name="totalValue"
+                     
+                      id="formGroupExampleInput2"
+                      placeholder=""
+                    ></input>
+                  </div>
+                  <div className="form-group fw-bolder">
+                    <label for="formGroupExampleInput2">Observaciones</label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      name="observations"
+                    
+                      id="formGroupExampleInput2"
+                      placeholder=""
+                    ></input>
+                  </div>
+                  <div className="form-group fw-bolder">
+                    <label for="formGroupExampleInput2">Último pedido</label>
+                    <input
+                      type="date"
+                      name="lastOrder"
+                     
+                      className="form-control"
+                      id="formGroupExampleInput2"
+                      placeholder=""
+                    ></input>
+                  </div>
+
+                  <div className="form-group fw-bolder">
+                    <label for="formGroupExampleInput2">Foto</label>
+                    <input
+                      type="file"
+                      id="customFile  "
+                      className="btn btn-primary custom-file-input"
+                    ></input>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </Modal.Body>
+        <Modal.Footer>
+        <Button
+            id="cerrar"
+            variant="primary"
+            className="fw-bolder"
+            onClick={handleClose}
+          >
+            Cancelar cambios
+          </Button>
+          <Button
+            id="guardar"
+            variant="primary"
+            
+            className=" fw-bolder"
+          >
+            Guardar cambios
+          </Button>
+            
+        </Modal.Footer>
+      </Modal>
+
+        {/* Modal para eliminar */}
+
+        <Modal className='ModalDelete'
+        show={showD}
+        onHide={handleCloseD}
+        backdrop="static"
+        keyboard={false}
+      ><div className='ModalHeaderDelete'>
+           <Modal.Header   closeButton>
+          <Modal.Title className='ModalTitleDelete'>¿Está Seguro De Que Desea Eliminar Este Producto?</Modal.Title>
+          </Modal.Header>
+     </div>
+        
+       
+        <Modal.Footer className='ModalFooterDelete'>
+        <Button
+            id="No"
+            variant="primary"
+            className="fw-bolder"
+            onClick={handleClose}
+          >
+            No
+          </Button>
+          <Button
+            id="Si"
+            variant="primary"
+            onClick={handleClose}
+            className=" fw-bolder"
+          >
+            Si
+          </Button>
+            
+        </Modal.Footer>
+      </Modal>
+  
+      
     </div>
 
   )
