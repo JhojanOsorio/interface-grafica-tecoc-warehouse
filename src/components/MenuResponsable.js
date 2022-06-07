@@ -2,11 +2,40 @@ import React, {useState} from "react";
 import Button from 'react-bootstrap/Button';
 import * as FaIcons from "react-icons/fa";
 import Modal from "react-bootstrap/Modal";
-
+import axios from "axios";
 
 
 
 function Example() {
+
+  const [data, setData]=useState([]);
+  const [gestoreseleccionado, setGestorseleccionado]= useState({
+    name:'',
+    lastName:'',
+    position: '',
+    identificationCard: '',
+    
+  })
+
+  const peticionPost=async()=>{
+ 
+    const baseUrl = "https://localhost:44378/api/products";
+    await axios.post(baseUrl, gestoreseleccionado)
+    .then(response=>{
+      setData(data.concat(response.data));
+    }).catch(error=>{
+      console.log(error)
+    })  }
+  
+  const handleChange=e=>{
+    const {name, value}=e.target;
+    setGestorseleccionado({...gestoreseleccionado, [name]: value});
+    console.log(gestoreseleccionado)
+
+  
+  }
+
+
     const [show, setShow] = useState(false);
     
     const handleClose = () => setShow(false);
@@ -26,7 +55,8 @@ function Example() {
   </div>
   </div>  
     
-        <Modal classname='ModalR'
+        <Modal 
+          classname='ModalR'
           show={show}
           onHide={handleClose}
           backdrop="static"
@@ -47,6 +77,8 @@ function Example() {
                     <input
                       type="text"
                       className="form-control"
+                      name='name'
+                      onchange={handleChange}
                       id="formGroupExampleInput"
                       placeholder=""
                     ></input>
@@ -56,8 +88,8 @@ function Example() {
                     <input
                       type="text"
                       className="form-control"
-            
-                      name="name"
+                      name="lastName"
+                      onchange={handleChange}
                       id="formGroupExampleInput2"
                       placeholder=""
                     ></input>
@@ -67,8 +99,8 @@ function Example() {
                     <input
                       type="text"
                       className="form-control"
-                      name="description"
-         
+                      name="position"
+                      onchange={handleChange}
                       id="formGroupExampleInput2"
                       placeholder=""
                     ></input>
@@ -78,9 +110,9 @@ function Example() {
                     <input
                       type="text"
                       className="form-control"
-                      name="serial"
+                      name="identificationCard"
+                      onchange={handleChange}
                       id="formGroupExampleInput2"
-                  
                       placeholder=""
                     ></input>
                   </div>
@@ -94,7 +126,7 @@ function Example() {
             <Button variant="primary" onClick={handleClose}>
               Cerrar
             </Button>
-            <Button variant="primary" onClick={handleClose}>
+            <Button variant="primary" onClick={()=>peticionPost }>
               Guardar
             </Button>
           </Modal.Footer>

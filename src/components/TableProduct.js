@@ -46,7 +46,7 @@ function TableProduct01() {
         },
         {
             name : 'Nombre Producto',
-            selector: row => row.nameProduct
+            selector: row => row.name
         },
         {
             name : 'Descripción',
@@ -58,15 +58,15 @@ function TableProduct01() {
         },
         {
             name : 'Departamento',
-            selector: row => row.departament
+            selector: row => row.idDepartament
         },
         {
             name : 'Municipio',
-            selector: row => row.municipality
+            selector: row => row.idMunicipality
         },
         {
             name : 'Tipo',
-            selector: row => row.typeProduct
+            selector: row => row.idType
         },
         {
             name : 'Modelo',
@@ -74,7 +74,7 @@ function TableProduct01() {
         },
         {
             name : 'Responsable',
-            selector: row => row.responsible
+            selector: row => row.idResponsable
         },
         {
             name : 'Lugar',
@@ -146,9 +146,9 @@ function TableProduct01() {
         onHide={handleClose}
         backdrop="static"
         keyboard={false}
-      ><div className='TitleModalEdit'>
+      ><div className='TitleModalEditProduct'>
            <Modal.Header   closeButton>
-          <Modal.Title >Editar producto</Modal.Title>
+          <Modal.Title className='EditHeaderProduct'>Editar producto</Modal.Title>
           </Modal.Header>
      </div>
         
@@ -367,7 +367,7 @@ function TableProduct01() {
        
         <Modal.Footer className='ModalFooterDelete'>
         <Button
-            id="No"
+            id="Not"
             variant="primary"
             className="fw-bolder"
             onClick={handleClose}
@@ -375,7 +375,7 @@ function TableProduct01() {
             No
           </Button>
           <Button
-            id="Si"
+            id="yes"
             variant="primary"
             onClick={handleClose}
             className=" fw-bolder"

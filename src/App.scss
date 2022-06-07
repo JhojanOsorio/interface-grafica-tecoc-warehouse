@@ -73,7 +73,7 @@ $gray: #c4ccde;
     color:#000102;
     
 }
-
+//agregar un nuevo producto
 .modal-footer{
     font-family:Georgia, 'Times New Roman', Times, serif;
     background-color: #a7d4f3;
@@ -93,12 +93,26 @@ $gray: #c4ccde;
     
 }
 
-//Estilos para las tablas
 .rdt_TableCol{
     background-color: #2C3E50;
     color: white;
 }
 
+//editar producto-tableproduct
+
+
+.TitleModalEditProduct{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color: #3498DB;
+    border-color: #000102;
+    width: 150%;
+    text-align: center;
+}
+
+//nuevo responsable- menu responsable
+.FooterModalR{
+    width: 100%;
+}
 
 .TitleModalR{
     font-family:Georgia, 'Times New Roman', Times, serif;
@@ -108,15 +122,12 @@ $gray: #c4ccde;
     text-align: center;
 }
 
-
-
- .TitleModalEdit {
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    background-color: #3498DB;
-    border-color: #000102;
-    width: 150%;
-    text-align: center;
+.BodyModalR{
+    width: 100%; 
 }
+
+
+ 
 
 .ModalHeaderDelete{
     font-family:Georgia, 'Times New Roman', Times, serif;
@@ -128,6 +139,7 @@ $gray: #c4ccde;
     
 }
 
+
 .ModalFooterDelete{
     font-family:Georgia, 'Times New Roman', Times, serif;
     background-color: #bde0f7;
@@ -138,4 +150,29 @@ $gray: #c4ccde;
 .ModalTitleDelete
 {
     background-color:white;
+}
+
+//table client
+.ModalBodyEditClient{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color: #bde0f7;
+    border-color: #000102;
+    width: 100%;
+   
+}
+
+.ModalFooterEditClient{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color: #bde0f7;
+    border-color: #000102;
+    width: 100%;
+    
+}
+
+.TitleModalEditClient{
+    width: 100%;
+}
+
+.ModalFooterDeleteClient{
+    width: 100%;  
 }
