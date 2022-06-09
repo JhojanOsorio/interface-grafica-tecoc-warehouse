@@ -32,8 +32,8 @@ function MenuUser() {
           backdrop="static"
           keyboard={false}
         ><div classname='TitleModalR'> 
-            <Modal.Header closeButton>
-        <Modal.Title>Igresa un nuevo Usuario</Modal.Title>
+            <Modal.Header className="BackgroundHeader">
+        <Modal.Title className="text-white fw-bolder    animate__animated animate__flipInX">Igresa un nuevo Usuario</Modal.Title>
       </Modal.Header>
 
       </div>

@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import Button from 'react-bootstrap/Button';
 import * as FaIcons from "react-icons/fa";
 import Modal from 'react-bootstrap/Modal';
+import 'animate.css';
 
   
 function Example() {
@@ -44,14 +45,14 @@ function Example() {
 </div>
   
     
-         <Modal
+         <Modal 
         show={show}
         onHide={handleClose}
         backdrop="static"
         keyboard={false}
       >
-        <Modal.Title>
-          <h3 className="text-white fw-bolder ">Ingresa el nuevo registro </h3>
+        <Modal.Title >
+          <h3 className="text-white fw-bolder    animate__animated animate__flipInX">Ingresa el nuevo registro </h3>
         </Modal.Title>
 
         <Modal.Body>
@@ -233,14 +234,17 @@ function Example() {
           </form>
         </Modal.Body>
         <Modal.Footer>
-          <Button
+        
+          <Button 
+        
             id="cerrar"
             variant="primary"
-            className="fw-bolder"
+            className="fw-bolder  "
             onClick={handleClose}
           >
             Cancelar
           </Button>
+          
           <Button
             id="guardar"
             variant="primary"

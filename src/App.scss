@@ -90,7 +90,7 @@ $gray: #c4ccde;
     border-color: #000102;
     width: 150%;
     text-align: center;
-    
+    color:#000102
 }
 
 .rdt_TableCol{
@@ -107,6 +107,7 @@ $gray: #c4ccde;
     border-color: #000102;
     width: 150%;
     text-align: center;
+    color:white;
 }
 
 //nuevo responsable- menu responsable
@@ -169,10 +170,34 @@ $gray: #c4ccde;
     
 }
 
-.TitleModalEditClient{
-    width: 100%;
-}
 
 .ModalFooterDeleteClient{
     width: 100%;  
 }
+
+.ModalFooterDeleteResponsable{
+    width: 100%;
+}
+
+.ModalHeaderDeleteResponsable{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color:white;
+    border-color: #000102;
+    width: 100%;
+    text-align: center;
+    
+    
+}
+.ModalTitleDeleteResponsable{
+    background-color:white;
+  
+}
+
+.BackgroundHeader{
+    background-color: #3498DB;
+  
+}
+.BackgroundHeaderEdit{
+    background-color: #3498DB; 
+}
+

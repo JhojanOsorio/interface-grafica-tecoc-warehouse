@@ -3,12 +3,12 @@ import axios from 'axios';
 import { useEffect, useState } from 'react'
 import DataTable, {createTheme} from 'react-data-table-component';
 import * as FaIcons from "react-icons/fa";
-import MenuResponsable from './MenuResponsable'
+import MenuResponsable from './MenuResponsible'
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
 
-function TableResponsable() {
+function TableResponsible() {
     
     const [show, setShow] = useState(false);
 
@@ -39,7 +39,7 @@ function TableResponsable() {
         },
         {
             name : '',
-            selector: row => <a className='btn btn-danger'><FaIcons.FaTrash/></a> 
+            selector: row => <a  onClick={handleShowD} className='btn btn-danger'><FaIcons.FaTrash/></a> 
         },
         {
             name : 'Nombre',
@@ -74,7 +74,7 @@ function TableResponsable() {
             <div className='col'>
                 <div class="card">   
                     <div className="card-header">
-                        <h3>Lista de Responsables<FaIcons.FaBox/></h3> 
+                        <h3>Lista de Responsables  <FaIcons.FaUser/></h3> 
                     </div>
                     <div className="card-body"> 
                         <MenuResponsable/>
@@ -95,8 +95,8 @@ function TableResponsable() {
           backdrop="static"
           keyboard={false}
         ><div classname='TitleModalR'> 
-            <Modal.Header closeButton>
-        <Modal.Title>Editar Responsable</Modal.Title>
+            <Modal.Header className='BackgroundHeaderEdit' >
+        <Modal.Title className=' animate__animated animate__flipInX'>Editar Responsable</Modal.Title>
       </Modal.Header>
 
       </div>
@@ -174,8 +174,8 @@ function TableResponsable() {
         backdrop="static"
         keyboard={false}
       ><div className='ModalHeaderDeleteResponsable'>
-           <Modal.Header   closeButton>
-          <Modal.Title className='ModalTitleDeleteResponsable'>¿Está Seguro De Que Desea Eliminar Este ?</Modal.Title>
+           <Modal.Header  className='ModalTitleDeleteResponsable'>
+          <Modal.Title className='ModalTitleDeleteResponsable  animate__animated animate__flipInX'>¿Esta seguro de que desea eliminar este responsable?</Modal.Title>
           </Modal.Header>
      </div>
         
@@ -185,14 +185,14 @@ function TableResponsable() {
             id="Not"
             variant="primary"
             className="fw-bolder"
-            onClick={handleClose}
+            onClick={handleCloseD}
           >
             No
           </Button>
           <Button
             id="yes"
             variant="primary"
-            onClick={handleClose}
+            onClick={handleCloseD}
             className=" fw-bolder"
           >
             Si
@@ -210,4 +210,4 @@ function TableResponsable() {
   )
 }
 
-export default TableResponsable
+export default TableResponsible

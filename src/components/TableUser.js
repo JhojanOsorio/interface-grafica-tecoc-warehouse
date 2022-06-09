@@ -40,7 +40,7 @@ function TableUser() {
         },
         {
             name : '',
-            selector: row => <a className='btn btn-danger'><FaIcons.FaTrash/></a> 
+            selector: row => <a  onClick={handleShowD}className='btn btn-danger'><FaIcons.FaTrash/></a> 
         },
         {
             name : 'Usuario',
@@ -83,14 +83,14 @@ function TableUser() {
             </div>
         </div>
 
-        <Modal classname='ModalR'
+        <Modal classname='ModalR '
           show={show}
           onHide={handleClose}
           backdrop="static"
           keyboard={false}
         ><div classname='TitleModalR'> 
-            <Modal.Header closeButton>
-        <Modal.Title>Editar este  Usuario</Modal.Title>
+            <Modal.Header  className='BackgroundHeaderEdit'>
+        <Modal.Title className=' animate__animated animate__flipInX'>Editar este  Usuario</Modal.Title>
       </Modal.Header>
 
       </div>
@@ -135,6 +135,41 @@ function TableUser() {
             </Button>
           </Modal.Footer>
         </Modal>
+
+         {/* Modal para eliminar */}
+
+         <Modal className='ModalDelete   animate__animated animate__zoomIn animate__faster '
+        show={showD}
+        onHide={handleCloseD}
+        backdrop="static"
+        keyboard={false}
+      ><div className='ModalHeaderDelete'>
+           <Modal.Header >
+          <Modal.Title className='ModalTitleDelete  animate__animated animate__flipInX'>¿Esta seguro que desea eliminar  este usuario?</Modal.Title>
+          </Modal.Header>
+     </div>
+        
+       
+        <Modal.Footer className='ModalFooterDelete'>
+        <Button
+            id="Not"
+            variant="primary"
+            className="fw-bolder"
+            onClick={handleCloseD}
+          >
+            No
+          </Button>
+          <Button
+            id="yes"
+            variant="primary"
+            onClick={handleCloseD}
+            className=" fw-bolder"
+          >
+            Si
+          </Button>
+            
+        </Modal.Footer>
+      </Modal>
         
     </div>
   )

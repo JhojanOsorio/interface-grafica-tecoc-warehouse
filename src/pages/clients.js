@@ -4,7 +4,7 @@ import TableClient from "../components/TableClient"
 const Clients = () => {
     return(
 
-        <div className="container2">
+        <div className="container2  ">
             <TableClient/>
         </div>
 

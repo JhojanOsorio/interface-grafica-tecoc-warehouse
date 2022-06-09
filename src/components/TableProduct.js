@@ -147,8 +147,8 @@ function TableProduct01() {
         backdrop="static"
         keyboard={false}
       ><div className='TitleModalEditProduct'>
-           <Modal.Header   closeButton>
-          <Modal.Title className='EditHeaderProduct'>Editar producto</Modal.Title>
+           <Modal.Header >
+          <Modal.Title className='EditHeaderProduct   animate__animated animate__flipInX'>Editar producto</Modal.Title>
           </Modal.Header>
      </div>
         
@@ -359,8 +359,8 @@ function TableProduct01() {
         backdrop="static"
         keyboard={false}
       ><div className='ModalHeaderDelete'>
-           <Modal.Header   closeButton>
-          <Modal.Title className='ModalTitleDelete'>¿Está Seguro De Que Desea Eliminar Este Producto?</Modal.Title>
+           <Modal.Header  >
+          <Modal.Title className='ModalTitleDelete   animate__animated animate__flipInX'>¿Está Seguro De Que Desea Eliminar Este Producto?</Modal.Title>
           </Modal.Header>
      </div>
         
@@ -370,14 +370,14 @@ function TableProduct01() {
             id="Not"
             variant="primary"
             className="fw-bolder"
-            onClick={handleClose}
+            onClick={handleCloseD}
           >
             No
           </Button>
           <Button
             id="yes"
             variant="primary"
-            onClick={handleClose}
+            onClick={handleCloseD}
             className=" fw-bolder"
           >
             Si

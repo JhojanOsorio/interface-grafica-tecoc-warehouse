@@ -74,7 +74,7 @@ function TableClient() {
             <div className='col'>
                 <div class="card">   
                     <div className="card-header">
-                        <h3>Lista de Clientes<FaIcons.FaBox/></h3> 
+                        <h3>Lista de clientes  <FaIcons.FaUsers/></h3> 
                     </div>
                     <div className="card-body"> 
                         <MenuClient/>
@@ -100,8 +100,8 @@ function TableClient() {
         backdrop="static"
         keyboard={false}
       ><div className='TitleModalEditClient'>
-           <Modal.Header   closeButton>
-          <Modal.Title >Editar cliente</Modal.Title>
+           <Modal.Header   className='BackgroundHeaderEdit'>
+          <Modal.Title  className=' animate__animated animate__flipInX'>Editar cliente</Modal.Title>
           </Modal.Header>
      </div>
         
@@ -183,8 +183,8 @@ function TableClient() {
         backdrop="static"
         keyboard={false}
       ><div className='ModalHeaderDeleteClient'>
-           <Modal.Header   closeButton>
-          <Modal.Title className='ModalTitleDelete'>¿Está Seguro De Que Desea Eliminar Este Cliente?</Modal.Title>
+           <Modal.Header >
+          <Modal.Title className='ModalTitleDelete  animate__animated animate__flipInX'>¿Está seguro de que desea eliminar este cliente?</Modal.Title>
           </Modal.Header>
      </div>
         
@@ -194,14 +194,14 @@ function TableClient() {
             id="Not"
             variant="primary"
             className="fw-bolder"
-            onClick={handleClose}
+            onClick={handleCloseD}
           >
             No
           </Button>
           <Button
             id="yes"
             variant="primary"
-            onClick={handleClose}
+            onClick={handleCloseD}
             className=" fw-bolder"
           >
             Si

@@ -1,10 +1,10 @@
-import TableResponsable from "../components/TableResponsable"
+import TableResponsible from "../components/TableResponsible"
 
 const Responsible = () => {
     return(
 
         <div className="container2">
-            <TableResponsable/>
+            <TableResponsible/>
         </div>
     )
 }
