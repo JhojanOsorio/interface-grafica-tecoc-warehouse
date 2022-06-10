@@ -6,6 +6,7 @@ import * as FaIcons from "react-icons/fa";
 import MenuUser from './MenuUser'
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import ItemModal from "./ItemModal";
 
 
 function TableUser() {
@@ -98,30 +99,11 @@ function TableUser() {
           <Modal.Body className='BodyModalR'  >
             <div  className > 
             <form>
-            
-                  <div className="form-group  fw-bolder mt-4">
-                    <label for="formGroupExampleInput ">Usuario</label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="formGroupExampleInput"
-                      placeholder=""
-                    ></input>
-                  </div>
-                  <div class="form-group fw-bolder">
-                    <label for="formGroupExampleInput2 ">Contraseña</label>
-                    <input
-                      type="text"
-                      className="form-control"
-            
-                      name="name"
-                      id="formGroupExampleInput2"
-                      placeholder=""
-                    ></input>
-                  </div>
+            <ItemModal Title="Usuario" />
+            <ItemModal Title="Contraseña" />
                  
                   
-                  
+             
           </form>
            </div>
             

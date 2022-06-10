@@ -6,6 +6,7 @@ import * as FaIcons from "react-icons/fa";
 import MenuClient from './MenuClient'
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import ItemModal from "./ItemModal";
 
 function TableClient() {
 
@@ -108,49 +109,10 @@ function TableClient() {
         <Modal.Body className='ModalBodyEditClient'>
         <form>
             
-            <div className="form-group  fw-bolder mt-4">
-              <label for="formGroupExampleInput ">Nombre</label>
-              <input
-                type="text"
-                className="form-control"
-                id="formGroupExampleInput"
-                placeholder=""
-              ></input>
-            </div>
-            <div class="form-group fw-bolder">
-              <label for="formGroupExampleInput2 ">Apellido</label>
-              <input
-                type="text"
-                className="form-control"
-      
-                name="name"
-                id="formGroupExampleInput2"
-                placeholder=""
-              ></input>
-            </div>
-            <div className="form-group fw-bolder">
-              <label for="formGroupExampleInput2  ">Cargo</label>
-              <input
-                type="text"
-                className="form-control"
-                name="description"
-   
-                id="formGroupExampleInput2"
-                placeholder=""
-              ></input>
-            </div>
-            <div className="form-group fw-bolder">
-              <label for="formGroupExampleInput2">Identificación</label>
-              <input
-                type="text"
-                className="form-control"
-                name="serial"
-                id="formGroupExampleInput2"
-            
-                placeholder=""
-              ></input>
-            </div>
-            
+        <ItemModal Title="Nombre" />
+              <ItemModal Title="Apellido" />
+              <ItemModal Title="Cargo" />
+              <ItemModal Title="Identificación" />
             
     </form>
         </Modal.Body>
