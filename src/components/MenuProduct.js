@@ -63,7 +63,7 @@ function Example() {
                 <div className="col  ">
                   <ItemModal title="Código" />
                   <ItemModal title="Nombre" />
-                  <ItemModal title="Descripcion" />
+                  <ItemModal title="Descripción" />
                   <ItemModal title="Serial" />
                   <div className="form-group fw-bolder">
                     <label for="formGroupExampleInput2">Departamento</label>
@@ -96,6 +96,7 @@ function Example() {
                   <ItemModal title="Modelo" />
                 </div>
                 <div className="col">
+              
                   <ItemModal title="Responsable" />
                   <ItemModal title="Condición" />
                   <ItemModal title="Cantidad" />

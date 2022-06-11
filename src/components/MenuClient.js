@@ -42,10 +42,10 @@ function Example() {
         <Modal.Body className="BodyModalR">
           <div className>
             <form>
-              <ItemModal Title="Nombre" />
-              <ItemModal Title="Apellido" />
-              <ItemModal Title="Cargo" />
-              <ItemModal Title="Identificación" />
+              <ItemModal title="Nombre" />
+              <ItemModal title="Apellido" />
+              <ItemModal title="Cargo" />
+              <ItemModal title="Identificación" />
             </form>
           </div>
         </Modal.Body>

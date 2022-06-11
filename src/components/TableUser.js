@@ -99,8 +99,8 @@ function TableUser() {
           <Modal.Body className='BodyModalR'  >
             <div  className > 
             <form>
-            <ItemModal Title="Usuario" />
-            <ItemModal Title="Contraseña" />
+            <ItemModal title="Usuario" />
+            <ItemModal title="Contraseña" />
                  
                   
              

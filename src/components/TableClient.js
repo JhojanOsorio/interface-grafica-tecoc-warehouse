@@ -6,7 +6,7 @@ import * as FaIcons from "react-icons/fa";
 import MenuClient from './MenuClient'
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import ItemModal from "./ItemModal";
+import ItemModal from './ItemModal';
 
 function TableClient() {
 
@@ -107,14 +107,14 @@ function TableClient() {
      </div>
         
         <Modal.Body className='ModalBodyEditClient'>
-        <form>
-            
-        <ItemModal Title="Nombre" />
-              <ItemModal Title="Apellido" />
-              <ItemModal Title="Cargo" />
-              <ItemModal Title="Identificación" />
-            
-    </form>
+        <div className>
+            <form>
+              <ItemModal title="Nombre" />
+              <ItemModal title="Apellido" />
+              <ItemModal title="Cargo" />
+              <ItemModal title="Identificación" />
+            </form>
+          </div>
         </Modal.Body>
         <Modal.Footer className='ModalFooterEditClient'>
         <Button
